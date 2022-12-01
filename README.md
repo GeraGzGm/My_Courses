@@ -1,7 +1,8 @@
-# Coursera
-Courses that I have taken.
+# Specializations and courses
 
-Fisrt Principles of Computer Vision:
+Topics related to all the specializations and courses that I have taken:
+
+- Fisrt Principles of Computer Vision:
 
   - Camera and Imaging:
 	
