@@ -1,6 +1,21 @@
 # Coursera
 Courses that I have taken.
 
-Some of them are still in construction!!!!
+Fisrt Principles of Computer Vision:
 
-<3
+  - Camera and Imaging:
+	
+    - Image moments
+    - Object segmentation
+		
+  - Features and Boundaries:
+	
+    - Edge detection with first order gradient
+    - Edge detection using Laplacian
+    - Edge detection using Canny algorithm
+    - Corner detection using Harris algorithm
+
+
+
+ 
+Some files are still in construction!!!! <3 
