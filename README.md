@@ -15,6 +15,7 @@ Topics related to all the specializations and courses that I have taken:
     - Edge detection using Laplacian
     - Edge detection using Canny algorithm
     - Corner detection using Harris algorithm
+    - Active contours
 
 
 
