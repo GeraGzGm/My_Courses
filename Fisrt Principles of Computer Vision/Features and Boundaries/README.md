@@ -1,6 +1,9 @@
 ## Topics covered :shipit::
 
 #### 1. Active Contours
+<p align="center">
+<video width="100" src="https://user-images.githubusercontent.com/52584370/211163950-7889b16c-a5a8-4dea-9385-d2a655f2a449.mp4">
+</p>
 
 #### 2. Corner Detection
 
