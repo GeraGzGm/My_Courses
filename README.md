@@ -6,6 +6,9 @@
   - Camera and Imaging	
   - Features and Boundaries
 
+- ROS2 Self Driving Car with Deep Learning and Computer Vision:
+  - Docker example
+
 :shipit: Each folder have a README file with more information and images!!!!! 
 
 Some files are still in construction!!!! <3 
