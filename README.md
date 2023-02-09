@@ -9,6 +9,9 @@
 - ROS2 Self Driving Car with Deep Learning and Computer Vision:
   - Docker example
 
+- Deep Learning Avanzado para Computer Vision con TensorFlow (Advanced Deep Learning for Computer Vision with Tensorflow)
+  - MNIST Classification
+
 :shipit: Each folder have a README file with more information and images!!!!! 
 
 Some files are still in construction!!!! <3 
