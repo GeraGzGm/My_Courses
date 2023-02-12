@@ -11,6 +11,8 @@
 
 - Deep Learning Avanzado para Computer Vision con TensorFlow (Advanced Deep Learning for Computer Vision with Tensorflow)
   - MNIST Classification
+  - VGG16 Convolutional Neural Network
+  - GRAD-CAM Visualization
 
 :shipit: Each folder have a README file with more information and images!!!!! 
 
