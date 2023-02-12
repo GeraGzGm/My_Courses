@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Deep[[:space:]]Learning[[:space:]]Avanzado[[:space:]]para[[:space:]]Computer[[:space:]]Vision[[:space:]]con[[:space:]]TensorFlow/CNN[[:space:]]Brain[[:space:]]Tumor[[:space:]]Classification/Check_point/model.1.h5 filter=lfs diff=lfs merge=lfs -text
+. filter=lfs diff=lfs merge=lfs -text
