@@ -25,3 +25,9 @@
 <p align="center">
 <img width="500" height="150" src="https://user-images.githubusercontent.com/52584370/218346370-d3e7a22f-4d13-465e-ae16-9df51fcd1858.png">
 </p>
+
+#### 6. Deep Clustering with K-Means
+<p align="center">
+<img width="450" height="350" src="https://user-images.githubusercontent.com/52584370/218605470-4cda3839-0221-4a35-bd1e-f1c39b6fbb75.png">
+</p>
+
