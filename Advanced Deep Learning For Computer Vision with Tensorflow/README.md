@@ -28,6 +28,10 @@
 
 #### 6. Deep Clustering with K-Means
 <p align="center">
-<img width="450" height="350" src="https://user-images.githubusercontent.com/52584370/218605470-4cda3839-0221-4a35-bd1e-f1c39b6fbb75.png">
+<img width="450" height="350" src="https://user-images.githubusercontent.com/52584370/218858436-1cf5cdc7-6bcc-4e3f-aff0-89c5361fb796.png">
+
+#### 7. Q-Learning
+<p align="center">
+<video width="100" src="https://user-images.githubusercontent.com/52584370/218858619-b8d3e217-dd7c-4165-aa9c-6a0ed8285dd7.mp4">
 </p>
 
