@@ -3,12 +3,12 @@
 ## Topics related to all the specializations and courses that I have taken:
 
 - Fisrt Principles of Computer Vision:
-  - Camera and Imaging	
-  - Features and Boundaries
+  - <a href="Fisrt Principles of Computer Vision/Camera and Imaging/README.md"> Camera and Imaging	</a>
+  - <a href="Fisrt Principles of Computer Vision/Features and Boundaries/README.md"> Features and Boundaries	</a>
 
 - ROS2 Self Driving Car with Deep Learning and Computer Vision:
 
-- Deep Learning Avanzado para Computer Vision con TensorFlow (Advanced Deep Learning for Computer Vision with Tensorflow)
+- <a href="Advanced Deep Learning For Computer Vision with Tensorflow/README.md"> Deep Learning Avanzado para Computer Vision con TensorFlow (Advanced Deep Learning for Computer Vision with Tensorflow) </a>
   - DNN
   - CNN
   - VGG16 Convolutional Neural Network
