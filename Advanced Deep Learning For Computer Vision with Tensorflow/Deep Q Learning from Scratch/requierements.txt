@@ -1,0 +1,6 @@
+#Gym libraries for the environments
+gymnasium[atari]
+gymnasium[accept-rom-license]
+
+#Other imports
+alive-progress
