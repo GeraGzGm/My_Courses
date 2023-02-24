@@ -21,10 +21,10 @@ class DQN():
     Plays = 1_000
     Epsilon = 1
     Min_Epsilon = 0.05
-    Epsilon_decay = 0.9995
+    Epsilon_decay = 0.9999
     Gamma = 0.9
-    Memory_size = 3_000
-    Min_observations = 1_000
+    Memory_size = 5_000
+    Min_observations = 2_500
     Num_observations = 0
     Target_Net_update = 1_500
     Minibatch = 32
@@ -97,39 +97,38 @@ class DQN():
 
     def Experience_replay(self):
         states = []
-        new_states = []
         targets = []
-        dones = []
-        rewards = []
 
         if len(self.memory) > self.Min_observations:
             minibatch = random.sample(self.memory, self.Minibatch)
-
-            for state, _, reward, new_state, done in minibatch:
+            
+            for state, action, reward, new_state, done in minibatch:
+                target = self.Q_network.predict(state, verbose = 0)
+                
+                if done:
+                    target[0][action] = reward
+                else:
+                    t = self.Target_network.predict(new_state, verbose = 0)
+                    target[0][action] = reward + self.Gamma * np.amax(t)
+            
+                targets.append(target)
                 states.append(state)
-                new_states.append(new_state)
-                dones.append(done)
-                rewards.append(reward)
-
+            
             states = np.array(states).reshape((self.Minibatch, 4, 84, 84, 1))
-            new_states = np.array(new_states).reshape(
-                (self.Minibatch, 4, 84, 84, 1))
-
-            next_q_values = np.amax(self.Target_network.predict(
-                new_states, verbose=0), axis=1)
-
-            q_values = self.Q_network.predict(states, verbose=0)
-
-            states = np.array(states).reshape(
-                (self.Minibatch, 4, 84, 84, 1))
             targets = np.array(targets)
-            self.Q_network.fit(states, targets, epochs=1, verbose=0)
-
-            del minibatch, states, targets
+            
+            self.Q_network.fit(states, targets,
+                               batch_size=(self.Minibatch),epochs=1, verbose=0)
+            
+            del targets,states
 
     def training(self):
         rewards = []
 
+        fig, ax = plt.subplots(1)
+       
+        
+        
         with alive_bar(total=self.Plays) as bar:
             for episode in range(self.Plays):
 
@@ -167,14 +166,19 @@ class DQN():
                         break
                 bar()
                 rewards.append(score)
+                
+                ax.bar(np.arange(0, episode+1, 1),rewards)
+                ax.set_title("Score: {}, Epsilon: {}".format(score,self.Epsilon))
+                plt.pause(0.01)
                 #print("score: {}".format(score))
-
-        plt.plot(rewards)
+                plt.show()
+        
         self.env.close()
 
     def Visualize_policy(self):
 
         fig, axis = plt.subplots(1)
+        plt.show()
 
         self.Q_network.load_weights('./weights/model_weight')
 
@@ -196,6 +200,6 @@ class DQN():
                 break
 
 
-a = DQN(Load_model=True)
+a = DQN(Load_model=False)
 a.training()
 # a.Visualize_policy()
