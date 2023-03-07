@@ -6,7 +6,7 @@
   - <a href="Fisrt Principles of Computer Vision/Camera and Imaging/README.md"> Camera and Imaging	</a>
   - <a href="Fisrt Principles of Computer Vision/Features and Boundaries/README.md"> Features and Boundaries	</a>
 
-- ROS2 Self Driving Car with Deep Learning and Computer Vision:
+- Advanced Deep Learning:
 
 - <a href="Advanced Deep Learning For Computer Vision with Tensorflow/README.md"> Deep Learning Avanzado para Computer Vision con TensorFlow (Advanced Deep Learning for Computer Vision with Tensorflow) </a>
   - DNN
