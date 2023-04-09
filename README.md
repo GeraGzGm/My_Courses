@@ -6,18 +6,9 @@
   - <a href="Fisrt Principles of Computer Vision/Camera and Imaging/README.md"> Camera and Imaging	</a>
   - <a href="Fisrt Principles of Computer Vision/Features and Boundaries/README.md"> Features and Boundaries	</a>
 
-- Advanced Deep Learning:
+- <a href="Advanced Computer Vision/README.md"> Advanced Computer Vision</a>
 
-- <a href="Advanced Deep Learning For Computer Vision with Tensorflow/README.md"> Deep Learning Avanzado para Computer Vision con TensorFlow (Advanced Deep Learning for Computer Vision with Tensorflow) </a>
-  - DNN
-  - CNN
-  - VGG16 Convolutional Neural Network
-  - GRAD-CAM Visualization
-  - Transfer learning
-  - Embeddings
-  - Deep Clustering
-  - Reinforecement Learning:
-    - Q-Learning
+- <a href="Advanced Deep Learning For Computer Vision with Tensorflow/README.md">Advanced Deep Learning for Computer Vision with Tensorflow </a>
 
 :shipit: Each folder have a README file with more information and images!!!!! 
 
