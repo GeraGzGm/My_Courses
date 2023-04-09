@@ -12,4 +12,4 @@
 
 :shipit: Each folder have a README file with more information and images!!!!! 
 
-Some files are still in construction!!!! <3 
+Some files are still under construction!!!! <3 
