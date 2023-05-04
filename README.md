@@ -10,6 +10,8 @@
 
 - <a href="Advanced Deep Learning For Computer Vision with Tensorflow/README.md">Advanced Deep Learning for Computer Vision with Tensorflow </a>
 
+- <a href="YOLOv8 Object Detection, Tracking and Web App in Python/README.md">YOLOv8 Object Detection, Tracking and Web App in Python </a>
+
 :shipit: Each folder have a README file with more information and images!!!!! 
 
 Some files are still under construction!!!! <3 
