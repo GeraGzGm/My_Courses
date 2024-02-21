@@ -34,7 +34,7 @@ import matplotlib.pyplot as plt
 from typing import Tuple
 
 G_MAX = 255 # 2^n - 1 -> 2^8 - 1
-OUT_BORDER_SIZE = 55
+OUT_BORDER_SIZE = 11
 
 def calculate_histogram(img: np.ndarray, title: str) -> None:
     plt.figure()
@@ -67,13 +67,38 @@ class Coordinates:
     def update_coords(self, event, x: int, y: int, flags, params) -> None:
         self.coord = (x, y)
 
+def window_mean(img: np.array, p: Tuple[int, int]) -> np.array:
+    k =int((OUT_BORDER_SIZE-1)/2)
+
+    mean = [0,0,0]
+    for i in range(-k,k):
+        for j in range(-k,k):
+            mean += img[p[1] + i,p[0] + j,:]
+    mean = mean * 1/OUT_BORDER_SIZE**2
     
+    print(f'Mean: {mean[2],mean[1],mean[0]}')
+    return mean
+
+def window_variance_and_std(img: np.array, p: Tuple[int, int], mean: np.array):
+    k =int((OUT_BORDER_SIZE-1)/2)
+
+    var = 0
+    for i in range(-k,k):
+        for j in range(-k,k):
+            var += (img[p[1] + i,p[0] + j,:] - mean)**2
+    var = var * 1/OUT_BORDER_SIZE**2
+
+    sd = np.sqrt(var)
+    print(f'SD: {sd[2],sd[1],sd[0]}')
+
 def exercise_3(img_path: str) -> None:
     cv2.namedWindow('Original Image')
     cv2.namedWindow('Outer Border')
     
     img = cv2.imread(img_path)
+    img = cv2.resize(img, (500,500))
     f,c = img.shape[:2]
+
     
     outer_border = np.zeros((OUT_BORDER_SIZE, OUT_BORDER_SIZE, 3), np.uint8)
     coords = Coordinates()
@@ -85,10 +110,14 @@ def exercise_3(img_path: str) -> None:
         print(f'Coord: [{x},{y}], RGB: [{img[x,y,2]},{img[x,y,1]},{img[x,y,0]}]')
         print(f'Intensity: {np.sum(img[x,y,:])/3} ')
         
-        if (x - OUT_BORDER_SIZE > OUT_BORDER_SIZE and y - OUT_BORDER_SIZE > OUT_BORDER_SIZE):
+        if (x - OUT_BORDER_SIZE > OUT_BORDER_SIZE and y - OUT_BORDER_SIZE > OUT_BORDER_SIZE) and \
+                (x + OUT_BORDER_SIZE < c - OUT_BORDER_SIZE and y + OUT_BORDER_SIZE < f - OUT_BORDER_SIZE):
+            
             outer_border = img[y-OUT_BORDER_SIZE:y+OUT_BORDER_SIZE, x-OUT_BORDER_SIZE:x+OUT_BORDER_SIZE]
-
+            mean = window_mean(img, (x,y))
+            window_variance_and_std(img, (x,y), mean)
         cv2.imshow('Outer Border', outer_border)
+
         if cv2.waitKey(60) & 0xFF == ord('q'):
             break
         
@@ -97,5 +126,5 @@ def exercise_3(img_path: str) -> None:
     
     
 if __name__ == '__main__':
-    image_path = './Images/omni.png'
+    image_path = './Images/Colours.png'
     exercise_3(image_path)
